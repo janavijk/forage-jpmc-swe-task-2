@@ -23,7 +23,8 @@ class DataStreamer {
    */
   static getData(callback: (data: ServerRespond[]) => void): void {
     const request = new XMLHttpRequest();
-    request.open('GET', DataStreamer.API_URL, false);
+request.open('GET', 'http://localhost:8080/query?id=1', true);
+
 
     request.onload = () => {
       if (request.status === 200) {
